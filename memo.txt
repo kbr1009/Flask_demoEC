@@ -1,0 +1,8 @@
+https://gray-code.com/blog/flask-on-docker/
+
+
+docker run -p 5000:80 -v ${PWD}/app:/app -d flask
+
+
+javascriptでリアルタイムインクリメント
+https://javascript-style.hatenablog.com/entry/2018/12/21/093000
