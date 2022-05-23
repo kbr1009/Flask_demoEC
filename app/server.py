@@ -10,7 +10,7 @@ def top_page():
 
     #カートidがない訪問者
     if request.cookies.get("cart_key") == None:
-        context = req_api.TopData(None).main()
+        context = req_api.TopData().main()
         uuid = str(req_api.TopData().get_uuid())
         res = make_response(render_template('top.html', top=context))
         res.set_cookie('cart_key', uuid)
