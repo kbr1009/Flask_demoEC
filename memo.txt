@@ -1,8 +1,14 @@
-https://gray-code.com/blog/flask-on-docker/
+Flask + gunicorn + docker
+https://qiita.com/arata-honda/items/e22c9df83df8ee0e9c4c
+→　CMD ["gunicorn", "flask_sample:app", "-b", "0.0.0.0:5000"]
 
+DockerでFlaskを実行するコンテナを作る
+https://gray-code.com/a/flask-on-docker/
+#イメージの作成
+$ docker image build -t <tag_name> .
 
-docker run -p 5000:80 -v ${PWD}/app:/app -d flask
-
+#コンテナ起動(バックグラウンド)
+$ docker run -p <host>:<contaner> -v ${PWD}/app:/app -d <tag_name>
 
 javascriptでリアルタイムインクリメント
 https://javascript-style.hatenablog.com/entry/2018/12/21/093000
